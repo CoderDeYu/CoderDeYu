@@ -95,20 +95,25 @@
 <li>本博客第一篇文章</li>
 <li>这篇文章编写用来熟悉hexo编写文章并且上传到github流程~~</li>
 </ul>
-<blockquote>
-<p>这里是正文开始(hexo编写文章流程)</p>
-</blockquote>
-<ul>
+<h3 id="这里是正文开始-hexo编写文章流程"><a href="#这里是正文开始-hexo编写文章流程" class="headerlink" title="这里是正文开始(hexo编写文章流程)"></a>这里是正文开始(hexo编写文章流程)</h3><ul>
 <li>新建一篇文章 cd 到你本地博客文件夹内 <code>hexo new &quot;博客名字&quot;</code></li>
-<li>会发现博客文件夹内 <code>source-&gt;_posts</code>多了一篇.md后缀的文件,这就是以markdown语法为基础的一篇博客文章,所以要编写hexo博客必须要学会markdown语法,这门语法很简单,用多了就会了,trust me</li>
-<li>然后在终端中同样是博客路径下 <code>hexo server</code> (在hexo中展示的markdown有些不一样,可能是根据hexo主题来约定的,这就要自已摸索啦~)</li>
-<li>接下来敲下命令<code>hexo generate</code> 接着<code>hexo deploy</code> 看到如下画面 你的博客文章就部署到线上了<br><img src="/2017/10/08/hexo编写博客/&quot;hexo编写博客/1.png&quot;" alt="&quot;hexo编写博客-1&quot;"></li>
+<li>会发现博客文件夹内 <code>source-&gt;_posts</code>多了一篇.md后缀的文件，这就是以markdown语法为基础的一篇博客文章，所以要编写hexo博客必须要学会markdown语法，这门语法很简单，用多了就会了，trust me</li>
+<li>然后在终端中同样是博客路径下 <code>hexo server</code> (在hexo中展示的markdown有些不一样，可能是根据hexo主题来约定的，这就要自已摸索啦~)</li>
+<li>接下来敲下命令<code>hexo generate</code> 接着<code>hexo deploy</code> 看到如下画面 你的博客文章就部署到线上了</li>
 </ul>
+<p><img src="/2017/10/08/hexo编写博客/1.png" alt="&quot;hexo编写博客-1&quot;"></p>
+<h4 id="另外遇到一个坑-引入本地图片-我已经找了一个最稳妥的图片上传方式"><a href="#另外遇到一个坑-引入本地图片-我已经找了一个最稳妥的图片上传方式" class="headerlink" title="另外遇到一个坑 引入本地图片 我已经找了一个最稳妥的图片上传方式"></a>另外遇到一个坑 引入本地图片 我已经找了一个最稳妥的图片上传方式</h4><ol>
+<li>在 <code>hexo new &quot;文章名字&quot;</code> 之前先设置一个属性和装个图片插件</li>
+<li>设置属性 : 在_config.yml文件中 <code>post_asset_folder: false</code>设置成<code>true</code></li>
+<li>在hexo目录下安装插件 : <code>npm install hexo-asset-image --save</code></li>
+<li>会发现在<code>hexo new &quot;文章名字&quot;</code>后会多一个<code>文章名字</code>的文件夹(跟.md文件名字相同)</li>
+<li>把所有的图片放进<code>文章名字</code>文件夹中，在.md的markdown语法中引入，引入的方法是<code>![&quot;图片描述&quot;](文章名字/图片名字.png)</code></li>
+</ol>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://coderdeyu.github.io/2017/10/08/hexo编写博客/" data-id="cj8idk9pa0000y23461syr4yh" class="article-share-link">Share</a>
+      <a data-url="https://coderdeyu.github.io/2017/10/08/hexo编写博客/" data-id="cj8idvgjg00000k34wau1zrru" class="article-share-link">Share</a>
       
       
     </footer>
