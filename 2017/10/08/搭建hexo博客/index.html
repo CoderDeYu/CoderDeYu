@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="hei," />
+  <meta name="keywords" content="搭建hexo博客," />
 
 
 
@@ -79,18 +79,27 @@
 
 
 
-<meta name="description" content="come here to play">
-<meta name="keywords" content="hei">
+<meta name="description" content="###准备工作  (有Node的请忽略)搭建hexo需要安装Node 下载node -&amp;gt; Node官网 会出现三个平台 选择自已的电脑系统然后下载  按照指示一步步下载  安装git  这里就不多说了 网上一堆教程  还不是因为我装了xcode就有git  哈哈哈 你要部署你的git到github上的话必须要和github连接在一起 那么就让我们来设置我们git和github连接在一起吧">
+<meta name="keywords" content="搭建hexo博客">
 <meta property="og:type" content="article">
 <meta property="og:title" content="搭建hexo博客">
 <meta property="og:url" content="https://coderdeyu.github.io/2017/10/08/搭建hexo博客/index.html">
 <meta property="og:site_name" content="CoderDeYu">
-<meta property="og:description" content="come here to play">
+<meta property="og:description" content="###准备工作  (有Node的请忽略)搭建hexo需要安装Node 下载node -&amp;gt; Node官网 会出现三个平台 选择自已的电脑系统然后下载  按照指示一步步下载  安装git  这里就不多说了 网上一堆教程  还不是因为我装了xcode就有git  哈哈哈 你要部署你的git到github上的话必须要和github连接在一起 那么就让我们来设置我们git和github连接在一起吧">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-10-08T08:22:42.000Z">
+<meta property="og:image" content="https://coderdeyu.github.io/2017/10/08/搭建hexo博客/1.png">
+<meta property="og:image" content="https://coderdeyu.github.io/2017/10/08/搭建hexo博客/2.png">
+<meta property="og:image" content="https://coderdeyu.github.io/2017/10/08/搭建hexo博客/3.png">
+<meta property="og:image" content="https://coderdeyu.github.io/2017/10/08/搭建hexo博客/4.png">
+<meta property="og:image" content="https://coderdeyu.github.io/2017/10/08/搭建hexo博客/5.png">
+<meta property="og:image" content="https://coderdeyu.github.io/2017/10/08/搭建hexo博客/6.png">
+<meta property="og:image" content="https://coderdeyu.github.io/2017/10/08/搭建hexo博客/7.png">
+<meta property="og:image" content="https://coderdeyu.github.io/2017/10/08/搭建hexo博客/8.png">
+<meta property="og:updated_time" content="2017-10-25T06:25:01.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="搭建hexo博客">
-<meta name="twitter:description" content="come here to play">
+<meta name="twitter:description" content="###准备工作  (有Node的请忽略)搭建hexo需要安装Node 下载node -&amp;gt; Node官网 会出现三个平台 选择自已的电脑系统然后下载  按照指示一步步下载  安装git  这里就不多说了 网上一堆教程  还不是因为我装了xcode就有git  哈哈哈 你要部署你的git到github上的话必须要和github连接在一起 那么就让我们来设置我们git和github连接在一起吧">
+<meta name="twitter:image" content="https://coderdeyu.github.io/2017/10/08/搭建hexo博客/1.png">
 
 
 
@@ -186,7 +195,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Startseite
+            Home
           </a>
         </li>
       
@@ -196,7 +205,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archiv
+            Archives
           </a>
         </li>
       
@@ -260,7 +269,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-10-08T15:48:58+08:00">
                 2017-10-08
@@ -300,7 +309,57 @@
       
 
       
-        
+        <p>###准备工作</p>
+<ol>
+<li><p>(有Node的请忽略)搭建hexo需要安装<code>Node</code> 下载node -&gt; <a href="https://nodejs.org/en/" target="_blank" rel="external">Node官网</a><br><img src="/2017/10/08/搭建hexo博客/1.png" alt="&quot;node官网&quot;"> 会出现三个平台 选择自已的电脑系统然后下载  按照指示一步步下载</p>
+</li>
+<li><p>安装git  这里就不多说了 网上一堆教程  还不是因为我装了xcode就有git  哈哈哈 <br>你要部署你的git到github上的话必须要和github连接在一起 那么就让我们来设置我们git和github连接在一起吧 </p>
+<ul>
+<li>首先要设置<code>ssh key</code>到github </li>
+<li>在终端输入cd ~/.ssh  回车后进到ssh文件夹 <code>ls</code> 一下看看有没有公钥和私钥(有就顺便备份一下) 一般文件名为id_rsa.pub 或者 id_dsa.pub 没有就要生成 <ul>
+<li>生成ssh key的方法 : 生成<code>public/private rsa key pair</code> <br>在命令行中输入<code>ssh-keygen -t rsa -C &#39;自已的email地址&#39;</code> <img src="/2017/10/08/搭建hexo博客/2.png" alt="&quot;生成公钥和私钥效果图&quot;"> </li>
+<li>按三下空格就会生成一个默认路径下的空密码的shh key</li>
+<li>查看一下自已的<code>~/.ssh</code>中的两个文件 <br><img src="/2017/10/08/搭建hexo博客/3.png" alt="&quot;生成公钥和私钥文件夹效果图&quot;"> </li>
+</ul>
+</li>
+<li>复制自已电脑上公钥的内容  一般是.pub文件里面的内容  用vim打开然后command + c</li>
+<li>去到github上面设置<ul>
+<li>打开<code>settings</code> <br><img src="/2017/10/08/搭建hexo博客/4.png" alt="&quot;github步骤图1&quot;"></li>
+<li>点击ssh and GPG keys <br><img src="/2017/10/08/搭建hexo博客/5.png" alt="&quot;github步骤图2&quot;"></li>
+<li>点进去把刚刚的内容复制 add就好了</li>
+</ul>
+</li>
+<li>最后一步了，只需测试一下链接是否正常了，接着输入：ssh -T git@github.com，这时会问是否继续连接，我们输入 yes，这样，我们的git配置就完成<br><img src="/2017/10/08/搭建hexo博客/6.png" alt="&quot;github步骤图3&quot;"></li>
+</ul>
+</li>
+<li><p>安装主要的工具<code>hexo</code>啦.<br> 简介自已可以去百度搜一下 我这里直接写安装步骤了 <br>输入<code>sudo npm install -g hexo</code> 回车然后输入密码就开始安装啦(这里我没出现过问题 如果出现错误请仔细查看错误 应该就是有一些工具没装好或者是工具版本太旧 升级一下)</p>
+</li>
+</ol>
+<p>###搭建一个属于自已的博客</p>
+<ol>
+<li>创建一个文件夹(名字自定义) 然后使用终端<code>cd</code>进去 执行命令<code>hexo init</code>(注意这个文件夹内必须是空文件夹才能初始化成功)<br> —- &gt; 我在这里出现过一个问题: 安装时会卡在<code>node scripts/install.js</code> 这个步骤下  我等不及又找个文件夹重新init一遍就好了  - -  总之要耐心等耐初始化  不要急 OK</li>
+<li>部署一下博客页面 <code>hexo generate</code>(<code>hexo g</code>  也可以）</li>
+<li>启动server <code>hexo server</code> 浏览器输入<a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a> 就会看到这样的界面<br><img src="/2017/10/08/搭建hexo博客/7.png" alt="&quot;github步骤图3&quot;"> 这是hexo的一个初始化界面</li>
+<li>将你的hexo和github进行连接,因为现在的域名和服务器都是基于自已电脑的<ul>
+<li>在github上面建立与你github用户名对应的仓库,仓库名字为<code>your_user_nanme.github.io</code> 比如我的github名字为<code>coderdeyu</code>-&gt; 那么我建立的仓库名字就是<code>coderdeyu.github.io</code> (这个很重要 不然找不到)</li>
+<li>配置自已博客路径下的<code>_config.yml</code>文件  现在我们需要_config.yml文件来建立关联 cd到这个路径下 用vim来打开这个文件 <code>vim _config.yml</code> 翻到最后进行设置<img src="/2017/10/08/搭建hexo博客/8.png" alt="&quot;github步骤图3&quot;"><br>示例 : <br><br><pre>deploy:<br>type: git<br>repository: <a href="https://github.com/CoderDeYu/CoderDeYu.github.io.git" target="_blank" rel="external">https://github.com/CoderDeYu/CoderDeYu.github.io.git</a><br>branch: master </pre><pre><code>* 特别说明一下repository 如果你配置了ssh的话就用另外一个地址 github上面有
+</code></pre></li>
+</ul>
+</li>
+<li>设置好之后执行该命令<code>npm install hexo-deployer-git --save</code> 这样就可以使用git部署自已的博客了</li>
+<li>上传自已的博客到github上 输入命令<code>hexo deploy</code>  然后打开你的博客地址 比如我的<code>https://github.com/CoderDeYu/CoderDeYu.github.io</code> 就可以看到自已的博客了<ul>
+<li>这一步坑挺多的 !!!!!<ul>
+<li>要在github上面建好仓库这步才能成功  如果没建仓库你又执行了这步就会报错<br>这时候建完后你要去目录把_deploy.git这个文件删除后在<code>npm install hexo-deployer-git --save</code><br>然后再执行hexo deploy 这样就建立关联了<br></li>
+<li>我打开页面发现404  原因是github上面的仓库名称没有按照格式your_user_name.github.ioz这样设置  要去setting哪里设置成这个样子,然后在项目设置中找到GitHub Pages   把Source改成master分支,才能打开</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="小结"><a href="#小结" class="headerlink" title="小结 :"></a>小结 :</h3><ul>
+<li>我也是看别人的教程搭建的博客,期间发现很多东西自已都不会,需要自已慢慢摸索 关键是要看错误信息 不要害怕终端中密密麻麻的英文 其实找错误还是挺有意思的一件事情 所以说不要害怕  还有就是自已弄懂的东西必须要记录下来 不然过会就忘了自已为什么要这么做 我就是那么记忆力比较差的 所以多记录点东西比较好 大家共勉~</li>
+</ul>
+
       
     </div>
     
@@ -317,7 +376,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/hei/" rel="tag"># hei</a>
+            <a href="/tags/搭建hexo博客/" rel="tag"># 搭建hexo博客</a>
           
         </div>
       
@@ -390,8 +449,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -411,7 +479,7 @@
                 <a href="/archives/">
               
                   <span class="site-state-item-count">2</span>
-                  <span class="site-state-item-name">Artikel</span>
+                  <span class="site-state-item-name">posts</span>
                 </a>
               </div>
             
@@ -424,7 +492,7 @@
               <div class="site-state-item site-state-tags">
                 
                   <span class="site-state-item-count">1</span>
-                  <span class="site-state-item-name">Tags</span>
+                  <span class="site-state-item-name">tags</span>
                 
               </div>
             
@@ -449,6 +517,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#小结"><span class="nav-number">1.</span> <span class="nav-text">小结 :</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -472,7 +556,7 @@
 </div>
 
 
-  <div class="powered-by">Erstellt mit  <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
 
 
 
