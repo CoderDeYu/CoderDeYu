@@ -95,7 +95,7 @@
 <meta property="og:image" content="https://coderdeyu.github.io/2017/10/08/搭建hexo博客/6.png">
 <meta property="og:image" content="https://coderdeyu.github.io/2017/10/08/搭建hexo博客/7.png">
 <meta property="og:image" content="https://coderdeyu.github.io/2017/10/08/搭建hexo博客/8.png">
-<meta property="og:updated_time" content="2017-10-25T07:13:31.000Z">
+<meta property="og:updated_time" content="2017-10-25T07:17:16.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="搭建hexo博客">
 <meta name="twitter:description" content="准备工作 (有Node的请忽略)搭建hexo需要安装Node 下载node -&amp;gt; Node官网 会出现三个平台 选择自已的电脑系统然后下载  按照指示一步步下载  安装git  这里就不多说了 网上一堆教程  还不是因为我装了xcode就有git  哈哈哈 你要部署你的git到github上的话必须要和github连接在一起 那么就让我们来设置我们git和github连接在一起吧   首先要">
@@ -342,13 +342,16 @@
 <li><p>将你的hexo和github进行连接,因为现在的域名和服务器都是基于自已电脑的</p>
 <ul>
 <li>在github上面建立与你github用户名对应的仓库,仓库名字为<code>your_user_nanme.github.io</code> 比如我的github名字为<code>coderdeyu</code>-&gt; 那么我建立的仓库名字就是<code>coderdeyu.github.io</code> (这个很重要 不然找不到)</li>
-<li><p>配置自已博客路径下的<code>_config.yml</code>文件  现在我们需要_config.yml文件来建立关联 cd到这个路径下 用vim来打开这个文件 <code>vim _config.yml</code> 翻到最后进行设置<img src="/2017/10/08/搭建hexo博客/8.png" alt="&quot;github步骤图5&quot;"></p>
-<p>示例 :<br><pre>deploy:<br>type: git<br>repository: <a href="https://github.com/CoderDeYu/CoderDeYu.github.io.git" target="_blank" rel="external">https://github.com/CoderDeYu/CoderDeYu.github.io.git</a><br>branch: master </pre></p>
-<pre><code>* 特别说明一下repository 如果你配置了ssh的话就用另外一个地址 github上面有
-</code></pre></li>
+<li>配置自已博客路径下的<code>_config.yml</code>文件  现在我们需要_config.yml文件来建立关联 cd到这个路径下 用vim来打开这个文件 <code>vim _config.yml</code> 翻到最后进行设置<img src="/2017/10/08/搭建hexo博客/8.png" alt="&quot;github步骤图5&quot;"></li>
+<li>特别说明一下repository 如果你配置了ssh的话就用另外一个地址 github上面有<br>示例 :<pre>deploy:
+type: git
+repository: https://github.com/CoderDeYu/CoderDeYu.github.io.git
+branch: master </pre> 
+</li>
 </ul>
 </li>
-<li>设置好之后执行该命令<code>npm install hexo-deployer-git --save</code> 这样就可以使用git部署自已的博客了</li>
+<li><p>设置好之后执行该命令<code>npm install hexo-deployer-git --save</code> 这样就可以使用git部署自已的博客了</p>
+</li>
 <li>上传自已的博客到github上 输入命令<code>hexo deploy</code>  然后打开你的博客地址 比如我的<code>https://github.com/CoderDeYu/CoderDeYu.github.io</code> 就可以看到自已的博客了<ul>
 <li>这一步坑挺多的 !!!!!<ul>
 <li>要在github上面建好仓库这步才能成功  如果没建仓库你又执行了这步就会报错<br>这时候建完后你要去目录把_deploy.git这个文件删除后在<code>npm install hexo-deployer-git --save</code><br>然后再执行hexo deploy 这样就建立关联了<br></li>
